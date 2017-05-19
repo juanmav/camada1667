@@ -8,7 +8,8 @@ let UserSchema = mongoose.Schema({
     nationality: String,
     isAuthor: Boolean,
     username: String,
-    password: String
+    password: String,
+    isAdmin: Boolean
 });
 
 // Agrego Metodos al schema

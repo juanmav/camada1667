@@ -29,6 +29,9 @@ module.exports = function () {
 
     router.post('/', function (req, res) {
         let userData = req.body;
+        console.log('La Data del usuario!: ');
+        console.log(userData);
+
         let user = new User(userData);
 
         user
@@ -47,13 +50,18 @@ module.exports = function () {
             .then(result => res.json(result));
     });
 
+    /*
+    // Decidimos que los usarios no se borran
+    // Porque deberiamos borrar sus articulos
+    // y/o comentarios.
+
     router.delete('/:id', function(req, res){
         let id = req.params.id;
 
         User
             .findByIdAndRemove(id)
             .then(result => res.json(result));
-    });
+    });*/
 
     return router;
 };
